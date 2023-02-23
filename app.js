@@ -1,6 +1,5 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
-const mongoose = require('mongoose');
 const authMiddleware = require('./middleware/auth');
 const authController = require('./controllers/auth');
 const userRoutes = require('./routes/user');

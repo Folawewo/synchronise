@@ -43,3 +43,27 @@ JWT_SECRET=mysecretkey
 * **`PORT:`** the port number on which the API should listen.
 * **`MONGO_URL:`** the URI of the MongoDB instance.
 * **`JWT_SECRET:`** a secret key used to sign and verify JWTs.
+
+4. Start the API:
+```sh
+npm start
+```
+
+The API will be accessible at `http://localhost:5000`.
+
+## API endpoints
+
+The following endpoints are available:
+
+* **`POST /users/signup`**: create a new user. Requires **`username`**, **`email`**, and **`password`** in the request body.
+* **`POST /users/login`**: authenticate a user. Requires **`email`** and **`password`** in the request body. Returns a JWT token.
+* **`GET /profile`**: get the profile information of the authenticated user.
+* **`PUT /profile`**: update the profile information of the authenticated user. Requires **`username`** and/or **`email`** in the request body.
+
+## Contributing
+
+If you find any bugs or have suggestions for improvement, please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
